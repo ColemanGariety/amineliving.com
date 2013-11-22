@@ -1,8 +1,8 @@
 var express = require('express')
   , app = express()
 
-app.get('/', function (req, res) {
-  res.send('future home of amineliving.com')
-})
+app.use(express.static(__dirname + '/public/assets'))
+app.use(express.static(__dirname + '/public'))
 
 app.listen(8080)
+console.log('Listening on 8080.')

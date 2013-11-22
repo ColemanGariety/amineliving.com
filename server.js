@@ -1,8 +1,10 @@
 var express = require('express')
-  , app = express()
+  , server = express()
 
-app.use(express.static(__dirname + '/public/assets'))
-app.use(express.static(__dirname + '/public'))
+server.use(express.static(__dirname + '/public/assets'))
+server.use(express.static(__dirname + '/public'))
 
-app.listen(8080)
-console.log('Listening on 8080.')
+var port = process.env.PORT || 5000;
+server.listen(port, function() {
+  console.log("Listening on " + port);
+})

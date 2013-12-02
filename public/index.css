@@ -103,6 +103,19 @@ h1:active {
 }
 
 .small {
-  opacity: .75;
   font-size: .5em;
+}
+
+main a {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+main a:hover {
+  opacity: .75;
+}
+
+main a:active {
+  color: #FFF;
+  opacity: 1;
 }

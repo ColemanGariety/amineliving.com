@@ -33,7 +33,7 @@ if (window.DeviceOrientationEvent) {
 
   var toggle = true
   
-  void function wave() {
+  function wave() {
     
     if (toggle) {
       toggle = false
@@ -48,9 +48,10 @@ if (window.DeviceOrientationEvent) {
         transform: 'rotate(-2deg)'
       }, 3000)
     }
+  }
   
-    setInterval(wave, 3000)
-  }()
+  wave()
+  setInterval(wave, 3000)
 }
 
 function dorientation() {

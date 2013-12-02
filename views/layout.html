@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Odyssey to Me - Amine</title>
+    <link rel="stylesheet" href="index.css" type="text/css" />
+    <meta name="viewport" content="width=6000, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1><a href="/"><span class="blue">Odyssey</span> <span class="yellow">to</span> <span class="red">Me</span></a></h1>
+    
+    <div id="water"></div>
+    
+    <nav>
+      <a href="/download">Download</a>
+      <a href="/swag">Swag</a>
+      <a href="/tour">Tour</a>
+      <a href="/about">About</a>
+    </nav>
+    
+    <main>
+      {{{yield}}}
+    </main>
+    
+    <!-- Stripe payment -->
+    <form action="/charge" method="POST">
+      <script
+        src="https://checkout.stripe.com/checkout.js"
+        class="stripe-button"
+        data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+        data-image="/square-image.png"
+        data-name="Odyssey to Me"
+        data-description="1 Album (free)"
+        data-amount="100">
+      </script>
+    </form>
+    
+    <script src="ender.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

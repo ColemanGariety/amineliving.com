@@ -5,6 +5,11 @@ var express = require('express')
 server.set('view engine', 'html');
 server.engine('html', require('hbs').__express)
 
+server.get('*.svgz', function (req, res) {
+  res.setHeader('Content-Encoding', 'gzip')
+  res.sendfile('./public/' + req.url)
+})
+
 server.get('/', function (req, res) {
   res.render('layout', { yield: fs.readFileSync('./views/index.html') })
 })

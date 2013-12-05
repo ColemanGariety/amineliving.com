@@ -17,8 +17,8 @@ server.get('/download', function (req, res) {
   res.render('layout', { yield: fs.readFileSync('./views/download.html') })
 })
 
-server.get('/swag', function (req, res) {
-  res.render('layout', { yield: fs.readFileSync('./views/swag.html') })
+server.get('/merch', function (req, res) {
+  res.render('layout', { yield: fs.readFileSync('./views/merch.html') })
 })
 
 server.get('/tour', function (req, res) {

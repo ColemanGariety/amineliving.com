@@ -121,7 +121,7 @@ main a:active {
   opacity: 1;
 }
 
-.social { width: 30px; }
+.social { width: 30px; position: relative; left: -250px; }
 
 footer { position: fixed; bottom: 20px; font-size: 1em; opacity: .66; left: 50%; margin-left: -325px; }
 
